@@ -1,0 +1,3 @@
+[submodule "core/pkgutils"]
+	path = core/pkgutils
+	url = git@github.com:hboetes/c4O.git
