@@ -1,0 +1,15 @@
+# Description: top replacement
+# URL:         https://hisham.hm/htop/
+
+name=scidvspc
+version=git
+release=1
+source="https://github.com/svn2github/scidvspc.git"
+
+build()
+{
+    cd $name
+    ./configure
+    make
+    make install DESTDIR=$PKG
+}

@@ -1,0 +1,16 @@
+# Description: top replacement
+# URL:         https://hisham.hm/htop/
+
+name=angband
+version=git
+release=1
+source="https://github.com/angband/angband.git"
+
+build()
+{
+    cd $name
+    ./autogen.sh
+    ./configure
+    make
+    make install DESTDIR=$PKG
+}

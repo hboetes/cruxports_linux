@@ -1,0 +1,31 @@
+# Description: tiling wm
+# URL:         https://www.herbstluftwm.org/
+# Depends on:
+
+name=sway
+version=git
+release=0.15
+
+build()
+{
+    cd $PKGMK_SOURCE_DIR
+    if cd $name ; then
+        git pull
+    else
+        git clone https://github.com/SirCmpwn/sway.git
+    fi
+    cp -r $PKGMK_SOURCE_DIR/$name $SRC
+    cd $SRC/$name
+    git checkout $release
+    mkdir build
+    cd build
+    cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_SYSCONFDIR=/etc ..
+    make
+    make install DESTDIR=$PKG
+}
+
+post-install()
+{
+    chmod a+s /usr/local/bin/sway
+    sudo setcap cap_sys_tty_config=eip /usr/local/bin/sway
+}
