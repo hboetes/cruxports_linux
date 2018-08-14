@@ -1,0 +1,17 @@
+# Description: preload binary that pretends pulse is being used.
+# URL:         https://github.com/i-rinat/apulse
+
+name=apulse
+version=git
+release=1
+source="https://github.com/i-rinat/apulse.git"
+
+build()
+{
+    cd $name
+    mkdir build
+    cd build
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+    make
+    make install DESTDIR=$PKG
+}
