@@ -1,0 +1,23 @@
+# Description: top replacement
+# URL:         https://hisham.hm/htop/
+
+name=emacs
+version=git
+release=27.0.50
+source="git://git.savannah.gnu.org/emacs.git"
+
+build()
+{
+    export CC=clang
+    cd $name
+    ./autogen.sh
+    ./configure \
+        --with-x \
+        --with-x-toolkit=gtk \
+        --with-xpm=no \
+        --prefix=/usr \
+        --mandir=/usr/share/man \
+        --infodir=/usr/share/info
+    make
+    make install DESTDIR=$PKG
+}
