@@ -1,5 +1,5 @@
-# Description: top replacement
-# URL:         https://hisham.hm/htop/
+# Description: the editor
+# URL:         https://www.gnu.org/software/emacs/
 
 name=emacs
 version=git
