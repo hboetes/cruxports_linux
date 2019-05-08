@@ -4,17 +4,10 @@
 
 name=sway
 version=git
-release=0.15
-
+release=0.15.2
+source="https://github.com/SirCmpwn/sway.git"
 build()
 {
-    cd $PKGMK_SOURCE_DIR
-    if cd $name ; then
-        git pull
-    else
-        git clone https://github.com/SirCmpwn/sway.git
-    fi
-    cp -r $PKGMK_SOURCE_DIR/$name $SRC
     cd $SRC/$name
     git checkout $release
     mkdir build

@@ -5,6 +5,7 @@
 name=wlc
 version=git
 release=1
+
 build()
 {
     cd $PKGMK_SOURCE_DIR
