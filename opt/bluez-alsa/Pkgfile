@@ -1,0 +1,16 @@
+# Description: bluetooth backend for alsa.
+# URL:         https://github.com/Arkq/bluez-alsa
+
+name=bluez-alsa
+version=git
+release=1
+source="https://github.com/Arkq/bluez-alsa.git"
+
+build()
+{
+    cd $name
+    autoreconf --install
+    ./configure --enable-aac --enable-debug
+    make
+    make install DESTDIR=$PKG
+}
