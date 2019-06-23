@@ -1,20 +1,17 @@
-# Description: tiling wm
-# URL:         https://www.herbstluftwm.org/
-# Depends on:
+# Description: tiling wm like i3wm, but then wayland compatible
+# URL:         https://swaywm.org/
+# Depends on:  meson wlroots wayland wayland-protocols pcre json-c pango cairo gdk-pixbuf2
 
 name=sway
 version=git
-release=0.15.2
+release=master
 source="https://github.com/SirCmpwn/sway.git"
 build()
 {
     cd $SRC/$name
-    git checkout $release
-    mkdir build
-    cd build
-    cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_SYSCONFDIR=/etc ..
-    make
-    make install DESTDIR=$PKG
+    meson build
+    ninja -C build
+    ninja -C build install
 }
 
 post-install()

@@ -4,8 +4,10 @@
 
 name=i3
 version=git
-release=git
+release=next
+branch=next
 source="https://github.com/i3/i3.git"
+
 build()
 {
     cd $SRC/$name
@@ -14,4 +16,5 @@ build()
     ../configure
     make
     make install DESTDIR=$PKG
+    rm -rf $PKG/usr/local/share/doc
 }
