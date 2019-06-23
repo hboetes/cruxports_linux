@@ -11,9 +11,7 @@ build()
     cd $name
     sh ./Build.sh
     mkdir -p $PKG/bin
-    install -s pax $PKG/bin/pax
-    ln $PKG/bin/pax $PKG/bin/cpio
-    ln $PKG/bin/pax $PKG/bin/tar
+    install -s pax $PKG/bin/paxtar
     mkdir -p $PKG/usr/share/man/man1/
-    install -m 444 mans/cpio.1 mans/pax.1 mans/tar.1 $PKG/usr/share/man/man1/
+    install -m 444 mans/tar.1 $PKG/usr/share/man/man1/paxtar
 }
