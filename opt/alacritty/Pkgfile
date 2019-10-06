@@ -9,7 +9,7 @@ source="https://github.com/jwilm/alacritty.git"
 build()
 {
     # For some reason $name only builds with the rustup version.
-    export PATH="$PATH:~/.cargo/bin"
+    export PATH="$PATH:$HOME/.cargo/bin"
     cd $name
     cargo build --release
     install -D target/release/alacritty $PKG/usr/local/bin/$name
