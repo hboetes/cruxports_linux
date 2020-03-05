@@ -10,8 +10,8 @@ build()
 {
     cd $name
     sh ./Build.sh
-    mkdir -p $PKG/bin
-    install -s pax $PKG/bin/paxtar
-    mkdir -p $PKG/usr/share/man/man1/
-    install -m 444 mans/tar.1 $PKG/usr/share/man/man1/paxtar
+    mkdir -p $PKG/usr/local/bin
+    install -s pax $PKG/usr/local/bin/paxtar
+    mkdir -p $PKG/usr/local/man/man1/
+    install -m 444 mans/tar.1 $PKG/usr/local/man/man1/paxtar.1
 }
