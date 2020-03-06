@@ -17,5 +17,5 @@ build()
 
 post-install()
 {
-    /usr/bin/systemctl try-restart asterisk.service
+    /usr/sbin/fwconsole stop && /usr/sbin/fwconsole start
 }
