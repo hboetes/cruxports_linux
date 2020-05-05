@@ -13,8 +13,8 @@ build()
     cd $SRC/$name
     autoreconf -fi
     mkdir -p build && cd build
-    ../configure
+    ../configure --disable-docs --disable-sanitizers
     make
     make install DESTDIR=$PKG
-    rm -rf $PKG/usr/local/share/doc
+    # rm -rf $PKG/usr/local/share/doc
 }

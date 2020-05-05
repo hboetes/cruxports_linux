@@ -3,12 +3,12 @@
 
 name=emacs
 version=git
-release=27.0.50
+release=28.0.50
 source="git://git.savannah.gnu.org/emacs.git"
 
 build()
 {
-    export CC=clang-7
+    export CC=clang-8
     cd $name
     ./autogen.sh
     ./configure --with-x --with-x-toolkit=gtk --without-makeinfo

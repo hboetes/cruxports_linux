@@ -1,0 +1,13 @@
+# Description: music file tagger
+# URL:         https://github.com/keithgg/puddletag
+
+name=puddletag
+version=git
+release=1
+source="https://github.com/keithgg/puddletag.git"
+
+build()
+{
+    cd $name/source
+    python setup.py install --root=$PKG
+}

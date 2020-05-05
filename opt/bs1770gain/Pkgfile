@@ -1,0 +1,15 @@
+# Description: replaygain calculator
+# URL:         http://bs1770gain.sourceforge.net/
+
+name=bs1770gain
+version=0.6.9
+release=1
+source="https://sourceforge.net/projects/bs1770gain/files/bs1770gain/$version/bs1770gain-$version.tar.gz"
+
+build()
+{
+    cd $name-$version
+    ./configure
+    make
+    make install DESTDIR=$PKG
+}

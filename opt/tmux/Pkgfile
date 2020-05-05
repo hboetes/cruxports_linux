@@ -3,12 +3,13 @@
 
 name=tmux
 version=git
-release=master
+branch=master
+release=timestamp
 source="https://github.com/tmux/tmux.git"
 
 build()
 {
-    export CC=clang-7
+    export CC=clang-8
     cd $name
     ./autogen.sh
     ./configure
