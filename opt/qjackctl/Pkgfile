@@ -1,0 +1,17 @@
+# Description: jack audio patchpay
+# URL:         https://github.com/rncbc/qjackctl.git
+
+name=qjackctl
+version=git
+release=0.6.2
+branch=master
+source="https://github.com/rncbc/qjackctl.git"
+
+build()
+{
+    cd $name
+    ./autogen.sh
+    ./configure
+    make
+    make install DESTDIR=$PKG
+}
