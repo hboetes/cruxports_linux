@@ -9,5 +9,6 @@ source="https://github.com/keithgg/puddletag.git"
 build()
 {
     cd $name/source
+    sed -i 's|freedb.freedb|gnudb.gnudb|' puddlestuff/tagsources/CDDB.py
     python setup.py install --root=$PKG
 }

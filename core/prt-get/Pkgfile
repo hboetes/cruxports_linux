@@ -15,10 +15,10 @@ source="
 build()
 {
     cd $name
-    patch -p1 < $SRC/prt-get-5.12-pkgdir.diff
+    patch -p1 -i $SRC/prt-get-5.12-pkgdir.diff
     sed-i 's|var/lib/pkg|var/package|' src/*
     sed-i 's|/usr/bin|/usr/local/bin|' src/installtransaction.cpp
-    patch -p0 < $SRC/prt-get.diff
+    patch -p0 -i $SRC/prt-get.diff
     aclocal
     autoconf
     autoheader

@@ -8,7 +8,7 @@ source="git://git.savannah.gnu.org/emacs.git"
 
 build()
 {
-    export CC=clang-8
+    export CC=clang
     cd $name
     ./autogen.sh
     ./configure --with-x --with-x-toolkit=gtk --without-makeinfo
