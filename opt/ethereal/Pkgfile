@@ -4,7 +4,7 @@
 name=ethereal
 version=git
 release=1
-source="https://github.com/AndyGrant/Ethereal.git"
+source=(https://github.com/AndyGrant/Ethereal.git)
 
 build()
 {

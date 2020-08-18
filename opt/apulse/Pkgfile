@@ -4,7 +4,7 @@
 name=apulse
 version=git
 release=1
-source="https://github.com/i-rinat/apulse.git"
+source=(https://github.com/i-rinat/apulse.git)
 
 build()
 {

@@ -4,10 +4,10 @@
 name=scidvspc
 version=4.21
 release=1
-source="
+source=(
     http://sourceforge.net/projects/scidvspc/files/source/scid_vs_pc-$version.tgz
     scidvspc.desktop
-"
+)
 build()
 {
     cd scid_vs_pc-$version

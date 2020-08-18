@@ -4,7 +4,7 @@
 name=stockfish
 version=git
 release=11
-source="https://github.com/official-stockfish/Stockfish.git"
+source=(https://github.com/official-stockfish/Stockfish.git)
 
 build()
 {

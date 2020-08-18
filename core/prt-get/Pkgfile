@@ -4,13 +4,13 @@
 name=prt-get
 version=5.12
 release=1
-source="
+source=(
     https://github.com/winkj/prt-get.git
     prt-get.diff
     prt-get.conf
     prt-get-$version-pkgdir.diff
     ask_prepost
-"
+)
 
 build()
 {

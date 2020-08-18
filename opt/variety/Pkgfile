@@ -5,7 +5,7 @@ name=variety
 version=git
 branch=master
 release=$(date '+%Y%m%d')
-source="https://github.com/varietywalls/variety.git"
+source=(https://github.com/varietywalls/variety.git)
 
 build()
 {

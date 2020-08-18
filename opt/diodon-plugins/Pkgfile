@@ -5,10 +5,10 @@
 name=diodon-plugins
 version=git
 release=git
-source="
+source=(
         https://github.com/RedHatter/diodon-plugins.git
         diodon.diff
-"
+)
 build()
 {
 

@@ -4,7 +4,7 @@
 name=vice
 version=3.3
 release=1
-source="https://sourceforge.net/projects/vice-emu/files/releases/vice-$version.tar.gz"
+source=(https://sourceforge.net/projects/vice-emu/files/releases/vice-$version.tar.gz)
 
 build()
 {

@@ -3,7 +3,7 @@
 name=virt-bootstrap
 version=git
 release=1.1.0
-source="https://github.com/virt-manager/virt-bootstrap.git"
+source=(https://github.com/virt-manager/virt-bootstrap.git)
 
 build()
 {

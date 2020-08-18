@@ -3,12 +3,13 @@
 
 name=puddletag
 version=git
+branch=sandrotosi-pyqt5+py3
 release=1
-source="https://github.com/keithgg/puddletag.git"
+source=(https://github.com/keithgg/puddletag.git)
 
 build()
 {
     cd $name/source
     sed -i 's|freedb.freedb|gnudb.gnudb|' puddlestuff/tagsources/CDDB.py
-    python setup.py install --root=$PKG
+    python3 setup.py install --root=$PKG
 }

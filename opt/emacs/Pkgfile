@@ -4,7 +4,7 @@
 name=emacs
 version=git
 release=28.0.50
-source="git://git.savannah.gnu.org/emacs.git"
+source=(git://git.savannah.gnu.org/emacs.git)
 
 build()
 {

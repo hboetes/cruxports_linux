@@ -5,7 +5,7 @@
 name=i3-gaps
 version=git
 release=git
-source="https://github.com/Airblader/i3.git"
+source=(https://github.com/Airblader/i3.git)
 build()
 {
     cd $SRC/$name

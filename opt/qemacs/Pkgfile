@@ -4,7 +4,7 @@
 name=qemacs
 version=git
 release=1
-source="https://gitlab.com/hboetes/qemacs.git"
+source=(https://gitlab.com/hboetes/qemacs.git)
 
 build()
 {
@@ -12,7 +12,7 @@ build()
     ./configure
     make LDFLAGS='-lm'
     make install DESTDIR=$PKG
-    for i in qe xqe; do
+    for i in qe ; do #xqe
         install -s $i $PKG/usr/local/bin
         ln -sf $i $PKG/usr/local/bin/${i}macs
     done

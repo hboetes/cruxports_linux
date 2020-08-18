@@ -4,7 +4,7 @@
 name=slim-themes
 version=git
 release=1
-source="https://github.com/adi1090x/slim_themes.git"
+source=(https://github.com/adi1090x/slim_themes.git)
 
 build()
 {

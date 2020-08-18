@@ -5,7 +5,7 @@ name=qjackctl
 version=git
 release=0.6.2
 branch=master
-source="https://github.com/rncbc/qjackctl.git"
+source=(https://github.com/rncbc/qjackctl.git)
 
 build()
 {

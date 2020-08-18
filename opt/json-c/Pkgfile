@@ -5,7 +5,7 @@ name=json-c
 version=git
 release=0.13
 branch=json-c-$release
-source="https://github.com/$name/$name.git"
+source=(https://github.com/$name/$name.git)
 
 build()
 {

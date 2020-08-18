@@ -4,7 +4,7 @@
 name=butt
 version=0.1.19
 release=1
-source="http://sourceforge.net/projects/butt/files/butt/butt-$version/butt-$version.tar.gz"
+source=(http://sourceforge.net/projects/butt/files/butt/butt-$version/butt-$version.tar.gz)
 
 build()
 {

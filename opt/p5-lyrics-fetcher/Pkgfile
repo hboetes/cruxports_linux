@@ -5,7 +5,7 @@
 name=p5-lyrics-fetcher
 version=0.5.2
 release=1
-source="$PERL_MIRROR/Lyrics/Lyrics-Fetcher-0.5.2.tar.gz"
+source=($PERL_MIRROR/Lyrics/Lyrics-Fetcher-0.5.2.tar.gz)
 
 build()
 {

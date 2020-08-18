@@ -4,7 +4,7 @@
 name=kitty
 version=git
 release=1
-source="https://github.com/kovidgoyal/kitty.git"
+source=(https://github.com/kovidgoyal/kitty.git)
 
 build()
 {

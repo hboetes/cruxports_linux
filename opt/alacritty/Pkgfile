@@ -4,7 +4,7 @@
 name=alacritty
 version=git
 release=1
-source="https://github.com/jwilm/alacritty.git"
+source=(https://github.com/jwilm/alacritty.git)
 
 build()
 {

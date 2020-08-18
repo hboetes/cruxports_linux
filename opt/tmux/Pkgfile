@@ -5,7 +5,7 @@ name=tmux
 version=git
 branch=master
 release=timestamp
-source="https://github.com/tmux/tmux.git"
+source=(https://github.com/tmux/tmux.git)
 
 build()
 {

@@ -4,9 +4,9 @@
 name=tetris
 version=git
 release=1
-source="
+source=(
    https://github.com/samtay/tetris.git
-"
+)
 
 build()
 {

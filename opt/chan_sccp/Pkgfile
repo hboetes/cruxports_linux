@@ -5,7 +5,7 @@ name=chan_sccp
 version=git-$(date '+%Y%m%d')
 branch=develop
 release=1
-source="https://github.com/chan-sccp/chan-sccp.git"
+source=(https://github.com/chan-sccp/chan-sccp.git)
 
 build()
 {

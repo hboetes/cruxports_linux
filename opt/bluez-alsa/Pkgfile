@@ -4,11 +4,11 @@
 name=bluez-alsa
 version=git
 release=1
-source="
+source=(
         https://github.com/Arkq/bluez-alsa.git
         bluealsa.conf
         bluealsa.service
-"
+)
 
 build()
 {
@@ -19,6 +19,7 @@ build()
         --enable-debug \
         --enable-hcitop \
         --enable-ofono \
+        --enable-aptx  \
         --enable-ldac
     make
     make install DESTDIR=$PKG

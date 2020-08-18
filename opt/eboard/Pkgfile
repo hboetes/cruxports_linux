@@ -4,7 +4,7 @@
 name=eboard
 version=git
 release=1
-source="https://github.com/fbergo/eboard.git"
+source=(https://github.com/fbergo/eboard.git)
 
 build()
 {
