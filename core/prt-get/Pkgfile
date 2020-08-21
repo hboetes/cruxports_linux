@@ -23,7 +23,7 @@ build()
     autoconf
     autoheader
     automake --add-missing
-    ./configure --prefix=/usr/local
+    ./configure --prefix=/usr/local --mandir=/usr/local/man
     make
     make install DESTDIR=$PKG
     install -d $PKG/etc

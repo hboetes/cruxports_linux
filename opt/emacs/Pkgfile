@@ -11,7 +11,7 @@ build()
     export CC=clang
     cd $name
     ./autogen.sh
-    ./configure --with-x --with-x-toolkit=gtk --without-makeinfo
+    ./configure --with-x --with-x-toolkit=gtk --without-makeinfo --mandir=/usr/local/man
     # ./configure --without-all --without-makeinfo --without-x --with-gnutls=no
     make
     make install DESTDIR=$PKG
