@@ -1,0 +1,16 @@
+# Description:
+# URL:         https://github.com/dandavison/delta.git
+
+name=delta
+version=git
+release=1
+source=(https://github.com/dandavison/delta.git)
+
+build()
+{
+    # For some reason $name only builds with the rustup version.
+    export PATH="$PATH:$HOME/.cargo/bin"
+    cd $name
+    cargo build --release
+    install -D target/release/$name         $PKG/usr/bin/$name
+}

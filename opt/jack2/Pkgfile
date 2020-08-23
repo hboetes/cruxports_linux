@@ -1,0 +1,15 @@
+# Description: jack audio daemon
+
+name=jack2
+version=git
+release=0
+branch=master
+source=(https://github.com/jackaudio/jack2.git)
+
+build()
+{
+    cd $name
+    ./waf configure --prefix /usr
+    ./waf
+    ./waf install
+}
