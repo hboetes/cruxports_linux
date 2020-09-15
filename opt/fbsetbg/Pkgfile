@@ -11,6 +11,6 @@ build()
 {
     cd $name
     ./configure
-    make
+    make CC=clang
     make install DESTDIR=$PKG
 }
