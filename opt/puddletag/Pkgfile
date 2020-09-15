@@ -3,9 +3,9 @@
 
 name=puddletag
 version=git
-branch=sandrotosi-pyqt5+py3
+# branch=master
 release=1
-source=(https://github.com/keithgg/puddletag.git)
+source=(https://github.com/puddletag/puddletag.git)
 
 build()
 {

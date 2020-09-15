@@ -9,7 +9,7 @@ source=(https://github.com/jackaudio/jack2.git)
 build()
 {
     cd $name
-    ./waf configure --prefix /usr
+    ./waf configure --prefix /usr --classic --alsa # --dbus
     ./waf
-    ./waf install
+    ./waf install --destdir=$PKG
 }
