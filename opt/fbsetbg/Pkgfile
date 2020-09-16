@@ -1,4 +1,4 @@
-# Description: wallpaper setter
+# Description: improvising wallpaper setter
 # URL:         https://github.com/hboetes/fbsetbg.git
 
 name=fbsetbg
@@ -11,6 +11,6 @@ build()
 {
     cd $name
     ./configure
-    make CC=clang
+    make
     make install DESTDIR=$PKG
 }
