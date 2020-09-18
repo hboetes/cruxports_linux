@@ -1,0 +1,16 @@
+# Description: grep, but faster
+# URL:         https://github.com/BurntSushi/ripgrep.git
+
+name=ripgrep
+version=git
+release=1
+source=(https://github.com/BurntSushi/ripgrep.git)
+
+build()
+{
+    # For some reason $name only builds with the rustup version.
+    export PATH="$PATH:$HOME/.cargo/bin"
+    cd $name
+    cargo build --release
+    install -D target/release/rg         $PKG/usr/local/bin/rg
+}
