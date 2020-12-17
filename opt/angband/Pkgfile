@@ -10,7 +10,7 @@ build()
 {
     cd $name
     ./autogen.sh
-    ./configure --enable-sdl
+    ./configure --enable-sdl2
     make
     make install DESTDIR=$PKG
 }

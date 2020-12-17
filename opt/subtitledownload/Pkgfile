@@ -9,6 +9,6 @@ source=(https://github.com/emericg/OpenSubtitlesDownload.git)
 build()
 {
     cd $name
-    install -d $PKG/usr/bin
-    install OpenSubtitlesDownload.py $PKG/usr/bin/$name
+    install -d $PKG/usr/local/bin
+    install OpenSubtitlesDownload.py $PKG/usr/local/bin/$name
 }

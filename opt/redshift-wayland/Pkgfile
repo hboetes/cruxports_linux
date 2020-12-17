@@ -9,17 +9,17 @@ source=(https://github.com/minus7/redshift.git)
 
 build()
 {
-    export CC=clang-8
+    export CC=clang-11
     cd $name
   ./bootstrap
   ./configure \
       --prefix=/usr \
       --enable-drm \
       --enable-randr \
-      --enable-vidmode \
       --enable-geoclue2 \
       --with-systemduserunitdir=/usr/lib/systemd/user \
       --enable-wayland
   make
   make install DESTDIR=$PKG
+#       --enable-vidmode \
 }

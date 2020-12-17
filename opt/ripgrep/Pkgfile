@@ -11,6 +11,6 @@ build()
     # For some reason $name only builds with the rustup version.
     export PATH="$PATH:$HOME/.cargo/bin"
     cd $name
-    cargo build --release
-    install -D target/release/rg         $PKG/usr/local/bin/rg
+    cargo build --release --target x86_64-unknown-linux-musl
+    install -D target/x86_64-unknown-linux-musl/release/rg         $PKG/usr/local/bin/rg
 }

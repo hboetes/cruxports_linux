@@ -7,13 +7,11 @@ version=git
 release=1
 source=(
         https://github.com/voidseg/jack-volume.git
-        $name.diff
 )
 
 build()
 {
     cd $name
-    patch -i $SRC/$name.diff
     make
     make install DESTDIR=$PKG
 }
